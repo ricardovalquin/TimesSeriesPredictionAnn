@@ -1,3 +1,5 @@
+#feed forward network with back propagation using pybrain
+#is very slow...
 from pybrain.tools.shortcuts import buildNetwork
 from pybrain.structure import FeedForwardNetwork
 from pybrain.structure import LinearLayer, SigmoidLayer, TanhLayer
@@ -15,7 +17,7 @@ data = [float(e.strip()) for e in lines] #this contains all the data in a list
 ds = SupervisedDataSet(3, 1)
 
 # ading 147
-for i in range(0, 60, 1):
+for i in range(0, 147, 1):
 	ds.addSample((data[i], data[i+1], data[i+2]), (data[i+3]))
 
 
@@ -69,5 +71,5 @@ trainer = BackpropTrainer(net, ds)
 
 print "training until the Convergence: ", trainer.trainUntilConvergence()
 
-#print "predicting the next month: "
-#print net.activate([110.0274337672, 112.7894792365, 97.7697551271])
+print "predicting the next month: "
+print net.activate([110.0274337672, 112.7894792365, 97.7697551271])
