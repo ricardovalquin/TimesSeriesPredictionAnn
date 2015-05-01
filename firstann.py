@@ -44,6 +44,7 @@ for inpt, target in ds:
 
 net = buildNetwork(3, 4, 1, bias = True, hiddenclass = SigmoidLayer)
 # net = buildNetwork(3, 4, 1, bias = True, hiddenclass = TanhLayer)
+print "network created"
 
 #creating the network and the layers
 # net = FeedForwardNetwork()
@@ -69,7 +70,9 @@ net = buildNetwork(3, 4, 1, bias = True, hiddenclass = SigmoidLayer)
 trainer = BackpropTrainer(net, ds)
 #print "train only once: ", trainer.train()
 
+print "trainer created"
+
 print "training until the Convergence: ", trainer.trainUntilConvergence()
 
 print "predicting the next month: "
-print net.activate([110.0274337672, 112.7894792365, 97.7697551271])
+print net.activate([75.4836510243, 107.4948286224, 71.5378903213])
