@@ -1,0 +1,12 @@
+This is the list of dependences to run this project:
+
+
+1. Install Scipy and all the other dependences
+	link: http://www.scipy.org/install.html
+	
+	ubuntu & debian command: sudo apt-get install python-numpy python-scipy python-matplotlib ipython ipython-notebook python-pandas python-sympy python-nose
+
+2. Install pybrain
+	link: http://pybrain.org/docs/quickstart/installation.html
+
+
